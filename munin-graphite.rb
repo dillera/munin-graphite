@@ -27,7 +27,7 @@ require 'socket'
 
 class Munin
   def initialize(host='localhost', port=4949)
-    @munin = TCPSocket.new(host, port)
+    @munin = TCPSocket.new('localhost', '4949')
     @munin.gets
   end
   
@@ -55,7 +55,7 @@ end
 
 class Carbon
   def initialize(host='localhost', port=2003)
-    @carbon = TCPSocket.new(host, port)
+    @carbon = TCPSocket.new('10.180.133.62', '2003')
   end
   
   def send(msg)
