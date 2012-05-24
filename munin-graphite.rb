@@ -60,7 +60,7 @@ end
 
 class Carbon
   def initialize(host='localhost', port=2003)
-    @carbon = TCPSocket.new('10.180.133.62', '2003')
+    @carbon = TCPSocket.new('10.253.107.68', '2003')
   end
   
   def send(msg)
